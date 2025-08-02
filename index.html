@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global State - Tours Riviera Maya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #1a3c34;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: #2e5c52;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #b3e0d2;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1em;
+            padding: 1em 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 2em auto;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #1a3c34;
+            color: #fff;
+            padding: 0.8em 1.5em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #2e5c52;
+        }
+        footer {
+            background-color: #1a3c34;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Global State - Tours Riviera Maya</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>¡Explora la Riviera Maya con Global State!</h2>
+        <p>Descubre la belleza de la Riviera Maya con los tours personalizados de Global State. Desde cenotes cristalinos hasta ruinas mayas y aventuras en la selva, tenemos la experiencia perfecta para ti. Además, ofrecemos <strong>transporte turístico</strong> para que disfrutes al máximo tu viaje.</p>
+        
+        <h3 id="galeria">Galería de Tours</h3>
+        <div class="gallery">
+            <!-- Ruinas -->
+            <img src="https://images.unsplash.com/photo-1516738901171-8eb4fc03bd4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ruinas de Tulum">
+            <img src="https://images.unsplash.com/photo-1589652717408-6a2f8ae6b1a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ruinas de Cobá">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ruinas de Chichén Itzá">
+            
+            <!-- Cenotes -->
+            <img src="https://images.unsplash.com/photo-1507668335394-3b7b62e9a2c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cenote cristalino">
+            <img src="https://images.unsplash.com/photo-1600585154526-990d71b8cc50?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cenote Ik Kil">
+            <img src="https://images.unsplash.com/photo-1596065843222-7e9d16b5d8ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cenote Dos Ojos">
+            
+            <!-- Playas -->
+            <img src="https://images.unsplash.com/photo-1507041951674-c4a9d4d23f33?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Playa del Carmen">
+            <img src="https://images.unsplash.com/photo-1539980308613-3f6420b3d089?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Playa Tulum">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Playa Akumal">
+            
+            <!-- Snorkel -->
+            <img src="https://images.unsplash.com/photo-1527798142257-2913f2da8f9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Snorkel en arrecifes">
+            <img src="https://images.unsplash.com/photo-1593179289617-3e8247ca0ea1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Snorkel en Puerto Morelos">
+            <img src="https://images.unsplash.com/photo-1593179302226-12e4e3e4e9d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Snorkel en Cozumel">
+            
+            <!-- Aventura -->
+            <img src="https://images.unsplash.com/photo-1544552866-8733f7bd9996?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aventura en ATV">
+            <img src="https://images.unsplash.com/photo-1600585154297-94b4a8a6e6c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Zipline en la selva">
+            <img src="https://images.unsplash.com/photo-1593179289612-9e5e1f0e8e5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rappel en cenote">
+            
+            <!-- Sitios Arqueológicos -->
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chichén Itzá">
+            <img src="https://images.unsplash.com/photo-1600585154297-94b4a8a6e6c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Uxmal">
+            <img src="https://images.unsplash.com/photo-1593179289620-0f0f5d5d8e0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ek Balam">
+        </div>
+
+        <h3 id="contacto">Contáctanos</h3>
+        <p>Teléfono: <a href="tel:+529841914628">+52 984 191 4628</a></p>
+        <p>Correo: <a href="mailto:stateglobal98@gmail.com">stateglobal98@gmail.com</a></p>
+        <form class="contact-form" action="mailto:stateglobal98@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Global State. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
